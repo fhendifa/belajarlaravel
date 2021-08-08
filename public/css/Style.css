@@ -1,0 +1,278 @@
+@media (min-width: 992px) {
+
+@font-face{
+    font-family: 'Heebo', sans-serif;
+    src: url(/font/Heebo-Bold.ttf);
+}
+h1{
+    font-family: 'Heebo', sans-serif;
+    font-weight: bold;
+    font-size: xx-large;
+}
+h5 {
+    font-family: 'Heebo', sans-serif;
+}
+p {
+    font-family: 'Heebo', sans-serif;
+}
+a {
+    font-family: 'Heebo', sans-serif;
+}
+li {
+    font-family: 'Heebo', sans-serif;
+}
+
+#header .bg_baner {
+    width: 100%;
+    height: auto;
+    background: linear-gradient(269.75deg, #C7D6E2 25.27%, #C9B798 37.2%, #F57C00 99.78%);
+    border-radius: 20px;
+}
+#header p {
+    width: 100%;
+    height: auto;
+    font-family: 'Heebo', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 35px;
+    line-height: 43px;
+    margin-top: 50px;
+
+    color: #FFFFFF;
+}
+#header img {
+    width: 516.42px;
+    height: 321px;
+    background: url(person-1-removebg-preview.png);
+    transform: matrix(-1, 0, 0, 1, 0, 0);
+    object-fit: cover;
+    margin-left: 180px;
+}
+#header a img{
+    width: 100%;
+    height: auto;
+    transform: matrix(1, 0, 0, 1, 0, 0);
+    margin-left: 100px;
+}
+#header a {
+    border-radius: 25px;
+    margin-left: 110px;
+}
+#kategori a{
+    text-decoration: none;
+}
+#kategori .row {
+    font-family: 'Heebo', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 35px;
+    line-height: 43px;
+}
+#kategori .col-lg-2{
+    margin-top: -50px;
+}
+#kategori .btn-light{
+    background: none    ;
+}
+#kategori .btn-light:hover{
+    color: whitesmoke;
+    background-color: #28a745;
+}
+#kategori .tas img{
+    width: 100%;
+    height: auto;
+}
+#kategori .pakaian img{
+    width: 100%;
+    height: auto;
+}
+#kategori .celana img{
+    width: 100%;
+    height: auto;
+}
+#kategori .sepatu img{
+    width: 100%;
+    height: auto;
+}
+#kategori .camera img {
+    width: 100%;
+    height: auto;
+}
+#kategori .handphone img{
+    width: 100%;
+    height: auto;
+}
+#kategori a {
+    border-radius: 25px;
+    width: 100%;
+    height: auto;
+}
+#kategori .teks, #produk .teks, #rekomendasi .teks {
+    text-align: right;
+    font-size: small;
+}
+#kategori a {
+    margin-left: -10px;
+}
+#slide {
+    width: 1242px;
+    height: 250px;
+    margin-left: 400px
+}
+#slide img {
+    width: 1242px;
+    height: 250px;
+}
+#top nav {
+    width: 100%;
+    height: auto;
+    background: #00FDCF;
+}
+#top .col-lg-1 img{
+    width: 100%;
+    height: auto;
+}
+#top .btn1{
+    border-radius: 10px;    
+}
+#top .btn2{
+    border-radius: 10px;
+}
+#produk a{
+    text-decoration: none;
+}
+#produk img, #rekomendasi img {
+    width: 250px;
+    height: 200px;
+    text-align: center;
+}
+#produk .card:hover{
+    background-color: #C9B798;
+}
+#rekomendasi a, #produk a{
+    text-decoration: none;
+}
+#rekomendasi img {
+    width: 350px;
+    height: 300px;
+}
+#rekomendasi .card:hover{
+    background-color: #C9B798;
+}
+
+#footer .container {
+    width: 100%;
+    height: auto;
+    background-color: rgb(255, 115, 0);
+    border-radius: 20px;
+}
+#footer .copyright img {
+    width: 25PX;
+    height: auto;
+    margin-left: 5px;
+}
+#footer .copyright p {
+    font-size: 5px;
+}
+#footer .copyright span {
+    font-weight: bold;
+}
+#footer .copyright {
+    margin-top: -20px;
+}
+#detail .sepatu {
+    width: 100%;
+    height: auto;
+}
+#detail .btn-outline-success {
+    width: 100%;
+    height: auto;
+}
+#detail .btn-success {
+    width: 100%;
+    height: auto;
+}
+#detail .col-lg-6 img {
+    width: 100%;
+    height: auto;
+}
+.keranjang .bg_keranjang {
+    background:white;
+    box-shadow: 0px 10px 20px rgba(237, 222, 222, 0.25);
+    border-radius: 25px;
+    width: 100%;
+    height: 281px;
+}
+.bg_gambar img{
+    width: 100%;
+    height: auto;
+}
+.bg_detail {
+    width: 100%;
+    height: auto;
+    background: white;
+}
+.bg_detail span {
+    float: right;
+}
+.bg_detail .btn-primary {
+    width: 100%;
+    height: auto;
+    background: linear-gradient(90deg, #F57C00 2.08%, #887664 100%);
+    border-radius: 10px;
+    border: none;
+}
+#Ulasan img {
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+    object-fit: cover;
+}
+#Ulasan .fas {
+    color: gold;
+}
+#Ulasan .far {
+    color:gray;
+}
+
+.bg_pembayaran {
+    width: 100%;
+    height: 50px;
+    background: #FFFFFF;
+    box-shadow: 0px 10px 10px rgba(248, 141, 141, 0.3);
+    border-radius: 10px;
+    
+}
+.bg_pembayaran span {
+    float: right;
+    margin-left: 50px;
+}
+.bg_upload {
+    width: 621px;
+    height: 287px;
+    border: 5px solid black;
+    box-sizing: border-box;
+    margin-left: 180px;
+    
+}
+.bg_upload h6{
+    margin-top: 120px;
+}
+.btn_upload .btn-danger {
+    width: 400px;
+    height: 59px;
+    background: #F57C00;
+    border-radius: 10px;
+    margin-left: 230px;
+}
+.bg_berhasil img {
+    width: 250px;
+    height: 250px;
+}
+.bg_berhasil .btn-danger {
+    width: 274px;
+    height: 56px;
+    background: #F57C00;
+    border-radius: 10px;
+}
+}
