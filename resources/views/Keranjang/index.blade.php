@@ -142,8 +142,6 @@
                         </div>
                     </form>
                     <div class="bg_detail p-3">
-                        <h6>ID Transaksi <span>#SH52221</span></h6>
-                        <hr>
                         <h6>Subtotal <span><b>Rp.</b>{{ $subtotal }}</span></h6>
                         <hr>
                         <h6>Kurir
