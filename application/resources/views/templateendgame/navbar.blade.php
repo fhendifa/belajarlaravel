@@ -139,128 +139,122 @@
                     @endif
                 </div>
             </nav>
-            <!-- modallogin -->
-            <div class="modal fade" id="modallogin" tabindex="-1" aria-labelledby="exampleModalLabel"
-                aria-hidden="true">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalLabel">Login</h5>
-                            <button type="submit" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                            </button>
-                        </div>
-                        <div class="modal-body">
-                            <form action="{{ url('/logincus') }}" method="POST">
-                                @csrf
-                                <div class="form-group">
-                                    <label for="email">Email address</label>
-                                    <input type="email" class="form-control" id="email" name="email"
-                                        aria-describedby="emailHelp">
-                                    <small id="emailHelp" class="form-text text-muted">We'll never share your email
-                                        with anyone
-                                        else.
-                                    </small>
-                                </div>
-                                <div class="form-group">
-                                    <label for="password">Password</label>
-                                    <input type="password" id="password" name="password" class="form-control"
-                                        aria-describedby="passwordHelpBlock">
-                                    <small id="passwordHelpBlock" class="form-text text-muted">
-                                        Your password must be 8-20 characters long, contain letters and numbers, and
-                                        must not
-                                        contain spaces, special characters, or emoji.
-                                    </small>
-                                </div>
-                                <button type="submit" class="btn btn-warning">Submit</button>
-                            </form>
-                        </div>
+        </div>
+    </div>
+</section>
+<!-- modallogin -->
+<div class="modal fade" id="modallogin" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Login</h5>
+                <button type="submit" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form action="{{ url('/logincus') }}" method="POST">
+                    @csrf
+                    <div class="form-group">
+                        <label for="email">Email address</label>
+                        <input type="email" class="form-control" id="email" name="email" aria-describedby="emailHelp">
+                        <small id="emailHelp" class="form-text text-muted">We'll never share your email
+                            with anyone
+                            else.
+                        </small>
                     </div>
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" name="password" class="form-control"
+                            aria-describedby="passwordHelpBlock">
+                        <small id="passwordHelpBlock" class="form-text text-muted">
+                            Your password must be 8-20 characters long, contain letters and numbers, and
+                            must not
+                            contain spaces, special characters, or emoji.
+                        </small>
+                    </div>
+                    <button type="submit" class="btn btn-warning">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- akhir modallogin -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Notification</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="modal-body">
+                    @if (Auth::user())
+                        @foreach (Keranjang::isi() as $item)
+                            <h5>{{ $item->title }}</h5>
+                            <p>{{ $item->isi }}</p>
+                            <hr>
+                        @endforeach
+                    @endif
                 </div>
             </div>
-            <!-- akhir modallogin -->
-            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
-                aria-hidden="true">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalLabel">Notification</h5>
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                            </button>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- awak modalregister -->
+<div class="modal fade" id="modalregister" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Register</h5>
+                <button type="submit" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form action="{{ url('/registercus') }}" method="post">
+                    @csrf
+                    <div class="form-row">
+                        <div class="col">
+                            <label for="name">Full name</label>
+                            <input type="text" class="form-control" placeholder="Full Name" id="name" name="name">
                         </div>
-                        <div class="modal-body">
-                            <div class="modal-body">
-                                @if (Auth::user())
-                                    @foreach (Keranjang::isi() as $item)
-                                        <h5>{{$item->title}}</h5>
-                                        <p>{{ $item->isi }}</p>
-                                        <hr>
-                                    @endforeach
-                                @endif
+                    </div>
+                    <div class="form-row">
+                        <div class="col">
+                            <label for="email">Email</label>
+                            <input type="text" class="form-control" placeholder="Email" id="email" name="email">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="col-md-10">
+                            <label for="password">Password</label>
+                            <input type="password" class="form-control" placeholder="Password" id="password"
+                                name="password">
+                            <div class="input-group-append">
                             </div>
                         </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                        </div>
                     </div>
-                </div>
-            </div>
-            <!-- awak modalregister -->
-            <div class="modal fade" id="modalregister" tabindex="-1" aria-labelledby="exampleModalLabel"
-                aria-hidden="true">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalLabel">Register</h5>
-                            <button type="submit" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                            </button>
-                        </div>
-                        <div class="modal-body">
-                            <form action="{{ url('/registercus') }}" method="post">
-                                @csrf
-                                <div class="form-row">
-                                    <div class="col">
-                                        <label for="name">Full name</label>
-                                        <input type="text" class="form-control" placeholder="Full Name" id="name"
-                                            name="name">
-                                    </div>
-                                </div>
-                                <div class="form-row">
-                                    <div class="col">
-                                        <label for="email">Email</label>
-                                        <input type="text" class="form-control" placeholder="Email" id="email"
-                                            name="email">
-                                    </div>
-                                </div>
-                                <div class="form-row">
-                                    <div class="col-md-10">
-                                        <label for="password">Password</label>
-                                        <input type="password" class="form-control" placeholder="Password"
-                                            id="password" name="password">
-                                        <div class="input-group-append">
-                                        </div>
-                                    </div>
-                                </div>
-                                {{-- <div class="form-row">
+                    {{-- <div class="form-row">
                                     <div class="col-md-10">
                                         <label for="address">Address</label>
                                         <input type="text" class="form-control" placeholder="Address" id="address"
                                         name="address">
                                     </div>
                                 </div> --}}
-                                <div class="row mt-3">
-                                    <div class="col">
-                                        <button class="btn btn-warning" type="submit">Register Now</button>
-                                    </div>
-                                </div>
-                            </form>
+                    <div class="row mt-3">
+                        <div class="col">
+                            <button class="btn btn-warning" type="submit">Register Now</button>
                         </div>
                     </div>
-                </div>
+                </form>
             </div>
-            <!-- akhir modalregister -->
         </div>
     </div>
-</section>
+</div>
+<!-- akhir modalregister -->
